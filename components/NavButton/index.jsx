@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { withRouter } from "next/router";
 
-import "../scss/NavButton.scss";
+import "./NavButton.scss";
 
 const NavButton = props => (
   <Link href={props.path}>

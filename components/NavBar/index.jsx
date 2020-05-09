@@ -1,6 +1,6 @@
 
-import "../scss/NavBar.scss";
-import NavButton from "./NavButton";
+import "./NavBar.scss";
+import NavButton from "../NavButton";
 
 const NavBar = props => (
   <div className="NavBar">

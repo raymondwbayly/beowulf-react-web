@@ -1,12 +1,12 @@
 import Head from "next/head";
 
-import Header from "./Header";
-import NavBar from "./NavBar";
+import Header from "../Header";
+import NavBar from "../NavBar";
 
-import "../scss/Layout.scss";
-import "../scss/index.scss";
+import "./Layout.scss";
+import "../../scss/index.scss";
 
-import navButtons from "../config/buttons";
+import navButtons from "../../config/buttons";
 
 const Layout = props => {
   const appTitle = `> BEOWULF`;

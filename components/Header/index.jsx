@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import "../scss/Header.scss";
+import "./Header.scss";
 
 const Header = props => (
   <Link href="/">
