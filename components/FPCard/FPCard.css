@@ -40,7 +40,11 @@
   width: 500px;
   height: 400px;
 }
-.FPCard .LoginButton {
+.FPCard .FPButton {
+  width: 100px;
+  margin: 15px;
+}
+.FPCard .CancelButton {
   width: 100px;
   margin: 15px;
 }

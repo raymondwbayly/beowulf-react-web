@@ -1,13 +1,13 @@
 @import "../../theme/theme";
 
-.LoginCard {
+.RegisterCard {
   display: flex;
   justify-content: space-around;
   align-items: center;
 
   height: 100%;
   width: 100%;
-  padding: 50px 0;
+  padding: 50px 50px;
 
   background: $primary;
 
@@ -31,7 +31,7 @@
   .CardFooter {
     width: 500px;
     font-family: $core-font;
-    font-size: 14px;
+    font-size: 10px;
     color: $on-primary-light;
     align-content: center;
   }
@@ -42,12 +42,13 @@
     height: 400px;
   }
 
-  .LoginButton {
+  .RegisterButton {
     width: 100px;
     margin: 15px;
   }
 
-  .LinkContainer {
-    padding: 10px;
+  .CancelButton {
+    width: 100px;
+    margin: 15px;
   }
 }

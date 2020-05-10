@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import Link from "next/link";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import RaisedButton from "material-ui/RaisedButton";
@@ -51,44 +51,55 @@ class LoginCard extends Component {
             </div>
           </CardBody>
           <CardFooter className="CardFooter">
-          <Link href="/forgot">
-      <a> Forgot Username/Password</a>
-    </Link>
+            <div className="LinkContainer">
+            <Link href="/forgot">
+              <a> Forgot Username/Password</a>
+            </Link>
+            </div>
+            <div className="LinkContainer">
+            <Link href="/register">
+              <a> Register on Beowulf</a>
+            </Link>
+            </div>
           </CardFooter>
         </Card>
       </div>
     );
   }
 
-  loginUser(event){
+  loginUser(event) {
     var apiBaseUrl = "http://localhost:3100/api/";
     var self = this;
-    var payload={
-    "email":this.state.username,
-    "password":this.state.password
-    }
-    axios.post(apiBaseUrl+'login', payload)
-    .then(function (response) {
-    console.log(response);
-    if(response.data.code == 200){
-    console.log("Login successfull");
-    var uploadScreen=[];
-    uploadScreen.push(<UploadScreen appContext={self.props.appContext}/>)
-    self.props.appContext.setState({loginPage:[],uploadScreen:uploadScreen})
-    }
-    else if(response.data.code == 204){
-    console.log("Username password do not match");
-    alert("username password do not match")
-    }
-    else{
-    console.log("Username does not exists");
-    alert("Username does not exist");
-    }
-    })
-    .catch(function (error) {
-    console.log(error);
-    });
-    }
+    var payload = {
+      email: this.state.username,
+      password: this.state.password,
+    };
+    axios
+      .post(apiBaseUrl + "login", payload)
+      .then(function (response) {
+        console.log(response);
+        if (response.data.code == 200) {
+          console.log("Login successfull");
+          var uploadScreen = [];
+          uploadScreen.push(
+            <UploadScreen appContext={self.props.appContext} />
+          );
+          self.props.appContext.setState({
+            loginPage: [],
+            uploadScreen: uploadScreen,
+          });
+        } else if (response.data.code == 204) {
+          console.log("Username password do not match");
+          alert("username password do not match");
+        } else {
+          console.log("Username does not exists");
+          alert("Username does not exist");
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
 }
 
 export default LoginCard;

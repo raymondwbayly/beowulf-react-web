@@ -35,7 +35,7 @@ class FPCard extends Component {
                   <RaisedButton
                     label="Send my Password"
                     primary={true}
-                    styleName="LoginButton"
+                    styleName="FPButton"
                     onClick={(event) => this.sendPassword(event)}
                   />
                   <RaisedButton
