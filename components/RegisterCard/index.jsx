@@ -19,7 +19,7 @@ class RegisterCard extends Component {
     return (
       <div className="CardContainer">
         <Card className="LoginCard">
-          <CardHeader className="CardHeader">Register</CardHeader>
+          <CardHeader className="CardHeader">Register on Beowulf</CardHeader>
           <CardBody className="CardBody">
             <div>
               <MuiThemeProvider>
@@ -62,13 +62,13 @@ class RegisterCard extends Component {
                     label="Submit"
                     primary={true}
                     styleName="RegisterButton"
-                    onClick={(event) => this.handleClick(event)}
+                    onClick={(event) => this.registerUser(event)}
                   />
-                   <RaisedButton
+                  <RaisedButton
                     label="Cancel"
                     primary={false}
                     styleName="CancelButton"
-                    onClick={(event) => this.handleClick(event)}
+                    onClick={(event) => this.cancelEvent(event)}
                   />
                 </div>
               </MuiThemeProvider>
@@ -78,6 +78,49 @@ class RegisterCard extends Component {
         </Card>
       </div>
     );
+  }
+
+  registerUser(event) {
+    var apiBaseUrl = "http://localhost:4000/api/";
+    console.log(
+      "values",
+      this.state.first_name,
+      this.state.last_name,
+      this.state.email,
+      this.state.password
+    );
+    //To be done:check for empty values before hitting submit
+    var self = this;
+    var payload = {
+      first_name: this.state.first_name,
+      last_name: this.state.last_name,
+      email: this.state.email,
+      password: this.state.password,
+    };
+    axios
+      .post(apiBaseUrl + "/register", payload)
+      .then(function (response) {
+        console.log(response);
+        if (response.data.code == 200) {
+          //  console.log("registration successfull");
+          var loginscreen = [];
+          // loginscreen.push(<LoginCard parentContext={this} />);
+          var loginmessage = "Not Registered yet.Go to registration";
+          self.props.parentContext.setState({
+            loginscreen: loginscreen,
+            loginmessage: loginmessage,
+            buttonLabel: "Register",
+            isLogin: true,
+          });
+        }
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  cancelEvent(event) {
+    window.location.href = "/";
   }
 }
 
