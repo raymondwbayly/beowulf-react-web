@@ -2,13 +2,13 @@ import Link from "next/link";
 
 import Layout from "../components/Layout";
 
-const Index = () => (
+const Dashboard = () => (
   <Layout>
     <br />
-    <Link href="/explore">
+    <Link href="/dashboard">
       <a> Dashboard</a>
     </Link>
   </Layout>
 );
 
-export default Index;
+export default Dashboard;

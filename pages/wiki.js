@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import Layout from "../components/Layout";
 
-const Index = () => (
+const Wiki = () => (
   <Layout>
     <br />
     <Link href="/explore">
@@ -11,4 +11,4 @@ const Index = () => (
   </Layout>
 );
 
-export default Index;
+export default Wiki;
