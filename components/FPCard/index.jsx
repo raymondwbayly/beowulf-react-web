@@ -5,43 +5,35 @@ import RaisedButton from "material-ui/RaisedButton";
 import TextField from "material-ui/TextField";
 import { Card, CardHeader, CardBody, CardFooter } from "react-simple-card";
 
-import "./LoginCard.scss";
-class LoginCard extends Component {
+import "./FPCard.scss";
+class FPCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "",
-      password: "",
+      email: "",
     };
   }
   render() {
     return (
       <div className="CardContainer">
         <Card className="LoginCard">
-          <CardHeader className="CardHeader">Login to Beowulf</CardHeader>
+          <CardHeader className="CardHeader">Forgot Password</CardHeader>
           <CardBody className="CardBody">
             <div>
               <MuiThemeProvider>
                 <div>
-                  <TextField
-                    hintText="Enter your Username"
-                    floatingLabelText="Username"
-                    onChange={(event, newValue) =>
-                      this.setState({ username: newValue })
-                    }
-                  />
                   <br />
                   <TextField
-                    type="password"
-                    hintText="Enter your Password"
-                    floatingLabelText="Password"
+                    type="text"
+                    hintText="Enter your Email"
+                    floatingLabelText="email"
                     onChange={(event, newValue) =>
-                      this.setState({ password: newValue })
+                      this.setState({ email: newValue })
                     }
                   />
                   <br />
                   <RaisedButton
-                    label="Submit"
+                    label="Send my Password"
                     primary={true}
                     styleName="LoginButton"
                     onClick={(event) => this.handleClick(event)}
@@ -51,9 +43,6 @@ class LoginCard extends Component {
             </div>
           </CardBody>
           <CardFooter className="CardFooter">
-          <Link href="/forgot">
-      <a> Forgot Username/Password</a>
-    </Link>
           </CardFooter>
         </Card>
       </div>
@@ -61,4 +50,4 @@ class LoginCard extends Component {
   }
 }
 
-export default LoginCard;
+export default FPCard;

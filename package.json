@@ -12,10 +12,13 @@
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
     "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.19.2",
+    "material-ui": "^0.20.2",
     "next": "9.3.5",
     "node-sass": "^4.14.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-simple-card": "^2.0.2"
+    "react-simple-card": "^2.0.2",
+    "react-tap-event-plugin": "^3.0.3"
   }
 }
