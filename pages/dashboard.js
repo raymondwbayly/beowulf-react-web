@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import Layout from "../components/Layout";
 
-const Dashboard = () => (
+const DashboardView = () => (
   <Layout>
     <br />
     <Link href="/dashboard">
@@ -11,4 +11,4 @@ const Dashboard = () => (
   </Layout>
 );
 
-export default Dashboard;
+export default DashboardView;

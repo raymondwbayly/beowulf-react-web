@@ -3,7 +3,7 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import LoginCard from '../components/LoginCard';
 
-const Index = () => (
+const IndexView = () => (
   <Layout>
     <br />
     <LoginCard></LoginCard>
@@ -12,4 +12,4 @@ const Index = () => (
   </Layout>
 );
 
-export default Index;
+export default IndexView;

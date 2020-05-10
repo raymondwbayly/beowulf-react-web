@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import Layout from "../components/Layout";
 
-const Profile = () => (
+const ProfileView = () => (
   <Layout>
     <br />
     <Link href="/explore">
@@ -11,4 +11,4 @@ const Profile = () => (
   </Layout>
 );
 
-export default Profile;
+export default ProfileView;

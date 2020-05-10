@@ -3,7 +3,7 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import RegisterCard from '../components/RegisterCard';
 
-const Register = () => (
+const RegistrationView = () => (
   <Layout>
     <br />
     <RegisterCard></RegisterCard>
@@ -12,4 +12,4 @@ const Register = () => (
   </Layout>
 );
 
-export default Register;
+export default RegistrationView;

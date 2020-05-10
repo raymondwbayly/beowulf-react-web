@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import Layout from "../components/Layout";
 
-const Wiki = () => (
+const WikiView = () => (
   <Layout>
     <br />
     <Link href="/explore">
@@ -11,4 +11,4 @@ const Wiki = () => (
   </Layout>
 );
 
-export default Wiki;
+export default WikiView;

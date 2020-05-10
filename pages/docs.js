@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import Layout from "../components/Layout";
 
-const Docs = () => (
+const DocsView = () => (
   <Layout>
     <br />
     <Link href="/explore">
@@ -11,4 +11,4 @@ const Docs = () => (
   </Layout>
 );
 
-export default Docs;
+export default DocsView;

@@ -3,7 +3,7 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import FPCard from '../components/FPCard';
 
-const ForgotPass = () => (
+const ForgotPasswordView = () => (
   <Layout>
     <br />
     <FPCard></FPCard>
@@ -12,4 +12,4 @@ const ForgotPass = () => (
   </Layout>
 );
 
-export default ForgotPass;
+export default ForgotPasswordView;
