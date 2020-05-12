@@ -1,7 +1,15 @@
 // theme/_fonts.scss
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:800|Merriweather+Sans|Share+Tech+Mono');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 $logo-font: 'Share Tech Mono', monospace;
 $header-font: 'Raleway', sans-serif;
 $core-font: 'Merriweather Sans', sans-serif;
+
+//Beowulf Font Specifications
+//Title
+$Beo-font: 'Raleway', sans-serif;
+$Beo-color: #EEEEEE;
+$Beo-size: 30px;
+$Beo-weight: 300;

@@ -10,13 +10,18 @@
 
   padding: 0 20px;
 
-  font-family: $logo-font;
-  font-size: 24px;
-  font-weight: bold;
-  color: $on-secondary;
+  font-family: $Beo-font;
+  font-size: $Beo-size;
+  font-weight: $Beo-weight;
+  color: $Beo-color;
+  letter-spacing: 10px;
   text-transform: uppercase;
 
   background: $highlight;
 
   cursor: pointer;
+
+  .titleIcon {
+    padding-left:20px;
+  }
 }
