@@ -3,7 +3,13 @@ import Link from "next/link";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import RaisedButton from "material-ui/RaisedButton";
 import TextField from "material-ui/TextField";
-import { Card, CardHeader, CardBody, CardFooter } from "react-simple-card";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Button from "@material-ui/core/Button";
 
 import "./LoginCard.scss";
 class LoginCard extends Component {
@@ -16,10 +22,16 @@ class LoginCard extends Component {
   }
   render() {
     return (
-      <div className="CardContainer">
-        <Card className="LoginCard">
-          <CardHeader className="CardHeader">Login to Beowulf</CardHeader>
-          <CardBody className="CardBody">
+      <Card className="{maxWidth: 450}">
+        <CardActionArea>
+        <CardMedia
+          component="img"
+          alt="Contemplative Reptile"
+          height="100"
+          image="/login-banner-2.png"
+          title="Contemplative Reptile"
+        />
+          <CardContent>
             <div>
               <MuiThemeProvider>
                 <div>
@@ -49,21 +61,17 @@ class LoginCard extends Component {
                 </div>
               </MuiThemeProvider>
             </div>
-          </CardBody>
-          <CardFooter className="CardFooter">
-            <div className="LinkContainer">
-            <Link href="/forgot">
-              <a> Forgot Username/Password</a>
-            </Link>
-            </div>
-            <div className="LinkContainer">
-            <Link href="/register">
-              <a> Register on Beowulf</a>
-            </Link>
-            </div>
-          </CardFooter>
-        </Card>
-      </div>
+          </CardContent>
+        </CardActionArea>
+        <CardActions>
+          <Button size="small" color="primary">
+            Forgot Password
+          </Button>
+          <Button size="small" color="primary">
+            Register
+          </Button>
+        </CardActions>
+      </Card>
     );
   }
 
